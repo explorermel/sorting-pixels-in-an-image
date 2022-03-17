@@ -1,0 +1,9 @@
+imread ("C:\Users\wsms5\OneDrive - Loughborough University\Paper_writing\25 images_land form sea delineation\2 grayscale image");
+
+sortedImage=reshape(sort(GrayScale_Image(:)), size(GrayScale_Image));
+imshow(sortedImage)
+
+figure(5)
+sortedWithThresholdLine = sortedImage;
+sortedWithThresholdLine(sortedWithThresholdLine == UpperLimit)  = 0;
+imshow(sortedWithThresholdLine);
